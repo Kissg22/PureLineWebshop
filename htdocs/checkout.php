@@ -56,7 +56,7 @@ $u = $_SESSION['user'];
             <!-- Felhasználói információ -->
             <div class="d-sm-flex justify-content-between align-items-center bg-secondary p-4 rounded-3 mb-grid-gutter">
               <div class="d-flex align-items-center">
-                <div class="img-thumbnail rounded-circle position-relative flex-shrink-0"><span class="badge bg-warning position-absolute end-0 mt-n2" data-bs-toggle="tooltip" title="Id"><?=$u["id"] ?></span><img class="rounded-circle" src="user.png" width="90" alt="Felhasználó"></div>
+                <div class="img-thumbnail rounded-circle position-relative flex-shrink-0"><span class="badge bg-warning position-absolute end-0 mt-n2" data-bs-toggle="tooltip" title="Id"><?=$u["id"] ?></span><img class="rounded-circle" src="img/user.png" width="90" alt="Felhasználó"></div>
                 <div class="ps-3">
                   <h3 class="fs-base mb-0"><?=$u["last_name"]." ".$u["first_name"] ?></h3><span class="text-accent fs-sm"><?=$u["email"]?></span>
                 </div>
