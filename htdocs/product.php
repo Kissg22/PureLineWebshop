@@ -100,14 +100,6 @@ $images = get_product_photos($pro["photos"]);
                 <div class="d-flex justify-content-between align-items-center pb-1 mt-5">
                     <label class="form-label" for="product-size">Mennyiség:</label><a class="nav-link-style fs-sm" href="#size-chart" data-bs-toggle="modal"><i class="ci-ruler lead align-middle me-1 mt-n1"></i>Méret útmutató</a>
                 </div>
-                <!--<select class="form-select" required id="product-size">
-                    <option value="">Válassz méretet</option>
-                    <option value="xs">XS</option>
-                    <option value="s">S</option>
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                </select> -->
             </div>
             <div class="mb-3 d-flex align-items-center">
                 <select name="quantity" class="form-select me-3" style="width: 5rem;">
@@ -276,96 +268,6 @@ $images = get_product_photos($pro["photos"]);
               <div class="progress-bar bg-danger" role="progressbar" style="width: 4%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div><span class="text-muted ms-3">2</span>
-        </div>
-      </div>
-    </div>
-    <hr class="mt-4 mb-3">
-    <div class="row pt-4">
-      <!-- Vélemények listája-->
-      <div class="col-md-7">
-        <div class="d-flex justify-content-end pb-4">
-          <div class="d-flex align-items-center flex-nowrap">
-            <label class="fs-sm text-muted text-nowrap me-2 d-none d-sm-block" for="sort-reviews">Rendezés:</label>
-            <select class="form-select form-select-sm" id="sort-reviews">
-              <option>Legújabb</option>
-              <option>Legrégebbi</option>
-              <option>Legnépszerűbb</option>
-              <option>Magas értékelés</option>
-              <option>Alacsony értékelés</option>
-            </select>
-          </div>
-        </div>
-        <!-- Vélemény-->
-        <div class="product-review pb-4 mb-4 border-bottom">
-          <div class="d-flex mb-3">
-            <div class="d-flex align-items-center me-4 pe-2"><img class="rounded-circle" src="img/shop/reviews/01.jpg" width="50" alt="Rafael Marquez">
-              <div class="ps-3">
-                <h6 class="fs-sm mb-0">Rafael Marquez</h6><span class="fs-ms text-muted">2019. június 28.</span>
-              </div>
-            </div>
-            <div>
-              <div class="star-rating"><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star-filled active"></i><i class="star-rating-icon ci-star"></i>
-              </div>
-              <div class="fs-ms text-muted">A felhasználók 83%-a hasznosnak találta ezt a véleményt</div>
-            </div>
-          </div>
-          <p class="fs-md mb-2">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est...</p>
-          <ul class="list-unstyled fs-ms pt-1">
-            <li class="mb-1"><span class="fw-medium">Előnyök:&nbsp;</span>Consequuntur magni, voluptatem sequi, tempora</li>
-            <li class="mb-1"><span class="fw-medium">Hátrányok:&nbsp;</span>Architecto beatae, quis autem</li>
-          </ul>
-          <div class="text-nowrap">
-            <button class="btn-like" type="button">15</button>
-            <button class="btn-dislike" type="button">3</button>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <button class="btn btn-outline-accent" type="button"><i class="ci-reload me-2"></i>További vélemények betöltése</button>
-        </div>
-      </div>
-      <!-- Vélemény írása űrlap-->
-      <div class="col-md-5 mt-2 pt-4 mt-md-0 pt-md-0">
-        <div class="bg-secondary py-grid-gutter px-grid-gutter rounded-3">
-          <h3 class="h4 pb-2">Írj egy véleményt</h3>
-          <form class="needs-validation" method="post" novalidate>
-            <div class="mb-3">
-              <label class="form-label" for="review-name">A neved<span class="text-danger">*</span></label>
-              <input class="form-control" type="text" required id="review-name">
-              <div class="invalid-feedback">Kérlek add meg a neved!</div><small class="form-text text-muted">A kommentben lesz látható.</small>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="review-email">Az email címed<span class="text-danger">*</span></label>
-              <input class="form-control" type="email" required id="review-email">
-              <div class="invalid-feedback">Kérlek add meg egy érvényes email címet!</div><small class="form-text text-muted">Csak azonosításhoz - nem fogunk spamelni.</small>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="review-rating">Értékelés<span class="text-danger">*</span></label>
-              <select class="form-select" required id="review-rating">
-                <option value="">Válaszd ki az értékelést</option>
-                <option value="5">5 csillag</option>
-                <option value="4">4 csillag</option>
-                <option value="3">3 csillag</option>
-                <option value="2">2 csillag</option>
-                <option value="1">1 csillag</option>
-              </select>
-              <div class="invalid-feedback">Kérlek válaszd ki az értékelést!</div>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="review-text">Vélemény<span class="text-danger">*</span></label>
-              <textarea class="form-control" rows="6" required id="review-text"></textarea>
-              <div class="invalid-feedback">Kérlek írj egy véleményt!</div><small class="form-text text-muted">A véleményednek legalább 50 karakternek kell lennie.</small>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="review-pros">Előnyök</label>
-              <textarea class="form-control" rows="2" placeholder="Vesszővel elválasztva" id="review-pros"></textarea>
-            </div>
-            <div class="mb-3 mb-4">
-              <label class="form-label" for="review-cons">Hátrányok</label>
-              <textarea class="form-control" rows="2" placeholder="Vesszővel elválasztva" id="review-cons"></textarea>
-            </div>
-            <button class="btn btn-primary btn-shadow d-block w-100" type="submit">Vélemény beküldése</button>
-          </form>
         </div>
       </div>
     </div>

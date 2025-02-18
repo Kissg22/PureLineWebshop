@@ -200,9 +200,9 @@ $total_pages = ceil($total_products / $limit);
     <div class="py-sm-2">
         <div class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden mb-4 rounded-3">
             <div class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
-                <h4 class="fs-lg fw-light mb-2">Converse All Star</h4>
+                <h4 class="fs-lg fw-light mb-2">Akció!</h4>
                 <h3 class="mb-4">Tedd Kényelmessé a Napodat</h3><a class="btn btn-primary btn-shadow btn-sm" href="#">Vásárolj Most</a>
-            </div><img class="d-block ms-auto" src="img/shop/catalog/banner.jpg" alt="Vásárolj Converse">
+            </div>
         </div>
     </div>
 
