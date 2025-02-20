@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE){
 define('BASE_URL','http://localhost');
 $conn = new mysqli ("localhost", "root","","shop");
 
-//define('BASE_URL','valami.infinityfreeapp');
+//define('BASE_URL','https://pureline.infinityfreeapp.com');
 //$conn = new mysqli ("sql213.infinityfree.com", "if0_37627594","S4ZftgwvR8pKh","if0_37627594_shop");
 $conn->set_charset("utf8mb4");
 
