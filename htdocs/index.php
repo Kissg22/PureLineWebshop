@@ -11,24 +11,34 @@ $products = db_select("products", '1 ORDER BY id DESC');
         
         <?php for ($i = 0; $i < 3; $i++): ?>
             <div class="px-lg-5" style="background-color: #eed4bd;">
-                <div class="d-lg-flex justify-content-between align-items-center ps-lg-4">
-                    <img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="img/nyari.avif" alt="Nyári kollekció">
-                    <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
-                        <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
-                            <h3 class="h2 text-color<?= $i ?> fw-light pb-1 from-start">Most érkezett meg!</h3>
-                            <h2 class="text-color<?= $i ?> display-5 from-start delay-1">Óriási Nyári Kollekció</h2>
-                            <p class="fs-lg text-color<?= $i ?> pb-3 from-start delay-2">Fürdőruhák, Felsők, Rövidnadrágok, Napszemüvegek és még sok más...</p>
-                            <div class="d-table scale-up delay-4 mx-auto mx-lg-0">
-                                <a class="btn btn-primary" href="shop.php">Vásárolj most<i class="ci-arrow-right ms-2 me-n1"></i></a>
-                                <a class="btn btn-secondary d-table mt-4 mx-auto mx-lg-0" href="uploads/PureLine.pdf" target="_blank">Webshop dokumentáció megnyitása</a>
-                            </div>
+                <div class="d-lg-flex justify-content-center align-items-center text-center flex-column flex-lg-row">
+                    
+                    <!-- Kép reszponzívan középen -->
+                    <div class="order-lg-2">
+                        <img class="img-fluid d-block mx-auto" style="max-width: 100%; max-height: 500px; height: auto; object-fit: contain;" 
+                             src="img/nyari.avif" alt="Nyári kollekció">
+                    </div>
+
+                    <div class="position-relative mx-auto py-5 px-4 text-center text-lg-start" style="max-width: 42rem; z-index: 10;">
+                        <h3 class="h2 text-color<?= $i ?> fw-light pb-1 from-start">Most érkezett meg!</h3>
+                        <h2 class="text-color<?= $i ?> display-5 from-start delay-1">Óriási Nyári Kollekció</h2>
+                        <p class="fs-lg text-color<?= $i ?> pb-3 from-start delay-2">
+                            Fürdőruhák, Felsők, Rövidnadrágok, Napszemüvegek és még sok más...
+                        </p>
+                        <div class="d-table scale-up delay-4 mx-auto mx-lg-0">
+                            <a class="btn btn-primary" href="shop.php">Vásárolj most<i class="ci-arrow-right ms-2 me-n1"></i></a>
+                            <a class="btn btn-secondary d-table mt-4 mx-auto mx-lg-0" href="uploads/PureLine.pdf" target="_blank">
+                                Webshop dokumentáció megnyitása
+                            </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         <?php endfor; ?>
     </div>
 </section>
+
 
 <!-- Products grid (Trending products) -->
 <section class="container pt-md-3 pb-5 mb-md-3" style="margin-top: 100px;">
