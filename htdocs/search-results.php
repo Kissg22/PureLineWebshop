@@ -23,14 +23,14 @@ if ($selectedGender && $selectedGender != 'all') {
 
 if ($priceRange) {
     switch ($priceRange) {
-        case 'under50':
-            $conditions[] = "price < 50";
+        case 'under5000':
+            $conditions[] = "price < 5000";
             break;
-        case '50to100':
-            $conditions[] = "price BETWEEN 50 AND 100";
+        case '5000to10000':
+            $conditions[] = "price BETWEEN 5000 AND 10000";
             break;
-        case 'over100':
-            $conditions[] = "price > 100";
+        case 'over10000':
+            $conditions[] = "price > 10000";
             break;
     }
 }
@@ -156,20 +156,20 @@ $total_pages = ceil($total_products / $limit);
                                     </li>
                                     <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="priceRange" value="under50" <?php if ($priceRange == 'under50') echo 'checked'; ?> onclick="filterByPrice('under50')">
-                                            <label class="form-check-label widget-filter-item-text">50 dollár alatt</label>
+                                            <input class="form-check-input" type="radio" name="priceRange" value="under5000" <?php if ($priceRange == 'under5000') echo 'checked'; ?> onclick="filterByPrice('under5000')">
+                                            <label class="form-check-label widget-filter-item-text">5 000 Ft alatt</label>
                                         </div>
                                     </li>
                                     <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="priceRange" value="50to100" <?php if ($priceRange == '50to100') echo 'checked'; ?> onclick="filterByPrice('50to100')">
-                                            <label class="form-check-label widget-filter-item-text">50 - 100 dollár</label>
+                                            <input class="form-check-input" type="radio" name="priceRange" value="5000to10000" <?php if ($priceRange == '5000to10000') echo 'checked'; ?> onclick="filterByPrice('5000to10000')">
+                                            <label class="form-check-label widget-filter-item-text">5 000 - 10 000 Ft</label>
                                         </div>
                                     </li>
                                     <li class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="priceRange" value="over100" <?php if ($priceRange == 'over100') echo 'checked'; ?> onclick="filterByPrice('over100')">
-                                            <label class="form-check-label widget-filter-item-text">100 dollár felett</label>
+                                            <input class="form-check-input" type="radio" name="priceRange" value="over10000" <?php if ($priceRange == 'over10000') echo 'checked'; ?> onclick="filterByPrice('over10000')">
+                                            <label class="form-check-label widget-filter-item-text">10 000 Ft felett</label>
                                         </div>
                                     </li>
                                 </ul>
@@ -222,7 +222,7 @@ $total_pages = ceil($total_products / $limit);
             <div class="py-4 my-2 my-md-0 py-md-5 px-4 ms-md-3 text-center text-sm-start">
                 <h4 class="fs-lg fw-light mb-2">Converse All Star</h4>
                 <h3 class="mb-4">Tedd Kényelmesebbé a Napod</h3><a class="btn btn-primary btn-shadow btn-sm" href="#">Vásárolj most</a>
-            </div><img class="d-block ms-auto" src="img/shop/catalog/banner.jpg" alt="Shop Converse">
+            </div>
         </div>
     </div>
 
